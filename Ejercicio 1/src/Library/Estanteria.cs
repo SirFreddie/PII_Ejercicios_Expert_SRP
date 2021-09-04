@@ -22,7 +22,7 @@ namespace SRP
         {
             this.libros.Add(libro);
 
-            Console.WriteLine($"Libro: {libro} almacenado!");
+            Console.WriteLine($"{libro.Titulo} almacenado en !");
         }
     }
 }
