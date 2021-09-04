@@ -25,8 +25,6 @@ namespace SRP
 
             estanteria7.AlmacenarLibro(libro1);
             estanteria6.AlmacenarLibro(libro2);
-
-            biblioteca.ImprimirSectores();
         }
     }
 }
