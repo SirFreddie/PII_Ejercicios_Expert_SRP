@@ -13,8 +13,6 @@ namespace SRP
         public Estanteria(String nombre)
         {
             this.Nombre = nombre;
-
-            Console.WriteLine($"Estanteria: {nombre} creada...");
         }
 
         // Metodo para agregar un libro a la estanteria.
@@ -22,7 +20,7 @@ namespace SRP
         {
             this.libros.Add(libro);
 
-            Console.WriteLine($"{libro.Titulo} almacenado en !");
+            Console.WriteLine($"{libro.Titulo} almacenado!");
         }
     }
 }
