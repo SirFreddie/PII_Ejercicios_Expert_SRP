@@ -1,52 +1,40 @@
 ﻿using System;
 using System.Text;
+using System.Collections;
 
 namespace Library
 {
     public class AppointmentService
-    {
-        public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
+    {   
+        private static int identifier = 0;
+
+        public string Identifier { get ; }
+
+        private ArrayList appointmentIdList = new ArrayList();
+
+        public AppointmentService(Patient patient, DateTime date, string appoinmentPlace, Doctor doctor)
         {
-            StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");
             Boolean isValid = true;
 
-            if (string.IsNullOrEmpty(name))
-            {
-                stringBuilder.Append("Unable to schedule appointment, Name is required\n");
-                isValid = false;
-            }
+            Console.WriteLine("Scheduling appointment...");
 
-            if (string.IsNullOrEmpty(id))
+            if (Validator.IsDoctorValid(doctor) && Validator.IsPatientValid(patient))
             {
-                stringBuilder.Append("Unable to schedule appointment, id is required\n");
-                isValid = false;
-            }
-
-            if (string.IsNullOrEmpty(phoneNumber))
-            {
-                stringBuilder.Append("Unable to schedule appointment, Phone number is required\n");
-                isValid = false;
+                isValid = true;
             }
 
             if (string.IsNullOrEmpty(appoinmentPlace))
             {
-                stringBuilder.Append("Unable to schedule appointment, Appoinment place is required\n");
-                isValid = false;
-            }
-
-            
-            if (string.IsNullOrEmpty(doctorName))
-            {
-                stringBuilder.Append("Unable to schedule appointment, Doctor name is required\n");
+                Console.WriteLine("Unable to schedule appointment, Appoinment place is required");
                 isValid = false;
             }
 
             if (isValid)
             {
-                stringBuilder.Append("Appoinment Scheduled");
+                Console.WriteLine("Appoinment Scheduled");
+                identifier = identifier + 1;
+                this.Identifier = identifier.ToString();
             }
-
-            return stringBuilder.ToString();
         }
 
     }
