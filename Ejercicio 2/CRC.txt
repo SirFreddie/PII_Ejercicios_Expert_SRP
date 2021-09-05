@@ -1,0 +1,52 @@
+CRC
+
+/////////////////////////////////////////////
+
+1) Validator
+
+Responsabilidades:
+
++ Hacer la validacion de los datos ingresados.
+
+Colaboradores:
+
++ Doctor
++ Patient
+
+/////////////////////////////////////////////
+
+2) Doctor
+
+Responsabilidades:
+
++ Conocer el nombre.
++ Conocer la especializacion.
+
+/////////////////////////////////////////////
+
+3) Patient
+
+Responsabilidades:
+
++ Conocer el nombre.
++ Conocer el telefono.
++ Conocer el id.
++ Conocer la edad.
+
+/////////////////////////////////////////////
+
+4) AppointmentService
+
+Responsabilidades:
+
++ Conocer el identificador unico del appointment.
++ Conocer la fecha.
++ Conocer el lugar del appointment.
+
+Colaboradores:
+
++ Validator
++ Doctor
++ Patient
+
+/////////////////////////////////////////////
