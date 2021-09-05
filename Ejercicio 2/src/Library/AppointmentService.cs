@@ -18,24 +18,12 @@ namespace Library
 
             Console.WriteLine("Scheduling appointment...");
 
-            if (Validator.IsDoctorValid(doctor) && Validator.IsPatientValid(patient))
-            {
-                isValid = true;
-            }
-
-            if (string.IsNullOrEmpty(appoinmentPlace))
-            {
-                Console.WriteLine("Unable to schedule appointment, Appoinment place is required");
-                isValid = false;
-            }
-
-            if (isValid)
+            if (Validator.IsDoctorValid(doctor) && Validator.IsPatientValid(patient) && Validator.IsAppointmentPlaceValid(appoinmentPlace))
             {
                 Console.WriteLine("Appoinment Scheduled");
-                identifier = identifier + 1;
+                identifier = identifier + 1; // Incrementa en +1 el identificador. 
                 this.Identifier = identifier.ToString();
             }
         }
-
     }
 }

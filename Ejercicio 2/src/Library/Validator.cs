@@ -82,7 +82,15 @@ namespace Library
 
         public static bool IsAppointmentPlaceValid(String appoinmentPlace)
         {
-            return !(string.IsNullOrEmpty(appoinmentPlace));
+            if (string.IsNullOrEmpty(appoinmentPlace))
+            {
+                Console.WriteLine("Unable to schedule appointment, Appoinment Place is required");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         } 
 
         public static bool IsAgeValid(String age)
