@@ -22,15 +22,5 @@ namespace SRP
         {
             this.sectores.Add(sector);
         }
-
-        public void AgregarEstanteriaEnSector(Sector sector, Estanteria estanteria)
-        {
-            sector.AgregarEstanteria(estanteria);
-        }
-
-        public void AlmacenarLibroEnEstanteria(Estanteria estanteria, Libro libro)
-        {
-            estanteria.AlmacenarLibro(libro);
-        }
     }
 }
