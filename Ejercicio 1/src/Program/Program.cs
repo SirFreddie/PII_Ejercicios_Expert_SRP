@@ -20,11 +20,11 @@ namespace SRP
             biblioteca.AgregarSector(sectorA);
             biblioteca.AgregarSector(sectorB);
 
-            biblioteca.AgregarEstanteriaEnSector(sectorA, estanteria7);
-            biblioteca.AgregarEstanteriaEnSector(sectorB, estanteria6);
+            sectorA.AgregarEstanteria(estanteria7);
+            sectorB.AgregarEstanteria(estanteria6);
 
-            biblioteca.AlmacenarLibroEnEstanteria(estanteria7, libro1);
-            biblioteca.AlmacenarLibroEnEstanteria(estanteria6, libro2);
+            estanteria7.AlmacenarLibro(libro1);
+            estanteria6.AlmacenarLibro(libro2);
         }
     }
 }
